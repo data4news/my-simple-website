@@ -3,8 +3,8 @@ function sayDontPoke() {
     alert('dont poke the fox');
 }
 
-// refer to a function
+// refer to a function - assign it to onclick
 document.querySelector('img').onclick = sayDontPoke
 
-// call a function
+// call the function when the page loads
 sayDontPoke()
