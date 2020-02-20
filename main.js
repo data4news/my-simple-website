@@ -1,10 +1,15 @@
-//define a function
-function sayDontPoke() {
-    alert('dont poke the fox');
-}
+d3.text("veggies.csv", function(data) {
+    var parsedCSV = d3.csv.parseRows(data);
 
-// refer to a function - assign it to onclick
-document.querySelector('img').onclick = sayDontPoke
+    var container = d3.select("body")
+        .append("table")
 
-// call the function when the page loads
-sayDontPoke()
+        .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+
+        .selectAll("td")
+            .data(function(d) { return d; }).enter()
+            .append("td")
+            .text(function(d) { return d; });
+});
