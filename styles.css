@@ -1,5 +1,13 @@
+html {
+	background-color: gray;
+}
+
 body {
 	background: white;
+	width: 50%;
+	margin: 10px auto;
+	padding: 10px;
+
 }
 
 table {
